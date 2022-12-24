@@ -6,13 +6,13 @@
     <p> Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
     <p> Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>
     <p> Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
-  </article>
+  </article-->
 
 
-  <article>
+  <!--article>
     <h3>Property Binding</h3>
-    <img src="{{ urlImagem }}"> //Interpolação
-    <img [src]="urlImagem "> //Property Binding --- Forma mais amigável para codar
+    <img src="{{ urlImagem }}"> Interpolação>
+    <img [src]="urlImagem "> //Property Binding --- Forma mais amigável para codar>
 
   </article-->
 
@@ -54,7 +54,7 @@
            [style.display]="classe.value == 'alert-success' ? 'block ' : 'none'">
         Mensagem só aparece quando tiver sucesso
       </div>
-    </div-->
+    </div>
 
   <article>
       <h3>Event Binding</h3>
@@ -73,6 +73,43 @@
         [class.highlight]="isMouseOver">Passe o mouse sobre mim</span>
       </div>
 
-  </article>
+  </article >
+
+  <section class="two-way-binding">
+
+    <article>
+      <h3>Two-way data binding</h3>
+      <div>
+
+        <input type="text" [value]="nome" (input)="nome = $any($event.target).value">
+        <input type="text" [ngModel]="nome" (ngModelChange)="nome =$event"-->
+
+        <!-- TO WAY DATA BINDING -->
+        <!--input type="text" [(ngModel)]="nome">
+        <p>Você digitou: {{ nome }}</p>
+
+        <p>Meu nome é {{ pessoa.nome }} tenho {{ pessoa.idade }} anos, sou natural de {{ pessoa.end.cidade }}</p>
+
+        <input type="text" [(ngModel)]="pessoa.nome">
+        <input type="text" [(ngModel)]="pessoa.idade">
+        <input type="text" [(ngModel)]="pessoa.end.cidade">
+
+      </div>
+    </article>
+
+  </section-->
+
+  <section class="input-output-properties">
+
+    <article>
+      <h3>Input/Output Properties</h3>
+
+      <app-curso [nome]="nomeDoCurso"></app-curso>
+      <contador [valor]="valorInicial"
+      (mudouValor)="onMudouValor($event)"></contador>
+
+    </article>
+
+  </section>
 
 </section>

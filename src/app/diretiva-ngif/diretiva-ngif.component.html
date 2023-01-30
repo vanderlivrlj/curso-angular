@@ -1,0 +1,17 @@
+<h2>*ngIf </h2>
+<button (click)="mostraCursos()">Mostra/Esconde cursos</button>
+<diV *ngIf="cursos.length > 0">
+    Lista de cursos aqui.
+</diV>
+
+<div *ngIf="cursos.length == 0">
+    Não existem cursos para serem listados.
+</div>
+
+<template [ngIf]="cursos">
+  <div>Lista de cursos aqui Template; </div>
+</template>
+
+<div template="ngIg cursos">
+  Lista dois
+</div>

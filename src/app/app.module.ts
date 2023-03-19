@@ -12,7 +12,7 @@ import { FormDebugComponent } from './form-debug/form-debug.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DataFormComponent,
+    DataFormComponent
   ],
   imports: [
     BrowserModule,

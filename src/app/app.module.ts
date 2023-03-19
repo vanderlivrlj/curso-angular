@@ -7,11 +7,12 @@ import { TemplateFormComponent } from './template-form/template-form.component';
 import { DataFormComponent } from './data-form/data-form.component';
 import {FormsModule} from "@angular/forms";
 import {TemplateFormModule} from "./template-form/template-form.module";
+import { FormDebugComponent } from './form-debug/form-debug.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataFormComponent
+    DataFormComponent,
   ],
   imports: [
     BrowserModule,
